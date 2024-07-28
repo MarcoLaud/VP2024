@@ -111,29 +111,3 @@ for epoch in range(epochs):
         manager.save()
         print("Checkpoint saved at epoch {}".format(epoch))
 
-# Visualization and L2 norm calculation
-nx = 100
-x_vals = np.linspace(0, L, nx).reshape(-1, 1)
-times = [0.0, 0.5, 1.0]
-L2_norm_diffs = []
-
-for t in times:
-    t_vals = t * np.ones_like(x_vals)
-    inputs = tf.convert_to_tensor(np.hstack((x_vals, t_vals)), dtype=tf.float32)
-    u_pinn = model(inputs).numpy()
-    u_analytical = analytical_solution(x_vals, t, L, c, A)
-
-    L2_norm_diff = np.sqrt(np.sum((u_pinn - u_analytical)**2) / np.sum(u_analytical**2))
-    L2_norm_diffs.append(L2_norm_diff)
-
-    plt.figure()
-    plt.plot(x_vals, u_analytical, label='Analytical')
-    plt.plot(x_vals, u_pinn, label='PINN')
-    plt.title(f"t = {t}")
-    plt.xlabel('x')
-    plt.ylabel('u')
-    plt.legend()
-    plt.show()
-
-for t, diff in zip(times, L2_norm_diffs):
-    print(f"L2 norm difference at t={t}: {diff}")
