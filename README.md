@@ -43,6 +43,11 @@ For more details, see the [LICENSE](LICENSE) file.
 
 ---
 
+## References
+Karniadakis, G. E., Kevrekidis, I. G., Lu, L., Perdikaris, P., Wang, S., & Yang, L. (2021). Physics-informed machine learning. Nature Reviews Physics, 3(6), 422-440. [https://doi.org/10.1038/s42254-021-00314-5](https://doi.org/10.1038/s42254-021-00314-5)
+
+---
+
 Thank you for exploring this repository. We hope it enriches your learning experience and enhances your understanding of Python and Physics-Informed Neural Networks. Happy coding!
 
 /Marco
