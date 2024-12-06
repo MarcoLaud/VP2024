@@ -1,0 +1,43 @@
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense (Dense)                   │ (None, 64)             │        50,240 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 32)             │         2,080 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 10)             │           330 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 52,650 (205.66 KB)
+ Trainable params: 52,650 (205.66 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/50
+1688/1688 - 4s - 2ms/step - accuracy: 0.9101 - loss: 0.3111 - val_accuracy: 0.9605 - val_loss: 0.1418
+Epoch 2/50
+1688/1688 - 3s - 2ms/step - accuracy: 0.9570 - loss: 0.1445 - val_accuracy: 0.9695 - val_loss: 0.1073
+Epoch 3/50
+
+Epoch 3: saving model to ./checkpoints/model_epoch_3.keras
+1688/1688 - 3s - 2ms/step - accuracy: 0.9677 - loss: 0.1061 - val_accuracy: 0.9712 - val_loss: 0.1063
+Epoch 4/50
+1688/1688 - 3s - 2ms/step - accuracy: 0.9742 - loss: 0.0828 - val_accuracy: 0.9700 - val_loss: 0.1043
+Epoch 5/50
+
+Epoch 5: saving model to ./checkpoints/model_epoch_5.keras
+1688/1688 - 3s - 2ms/step - accuracy: 0.9785 - loss: 0.0691 - val_accuracy: 0.9765 - val_loss: 0.0874
+Epoch 6/50
+1688/1688 - 3s - 2ms/step - accuracy: 0.9824 - loss: 0.0562 - val_accuracy: 0.9747 - val_loss: 0.0953
+Epoch 7/50
+
+Epoch 7: saving model to ./checkpoints/model_epoch_7.keras
+1688/1688 - 3s - 2ms/step - accuracy: 0.9847 - loss: 0.0495 - val_accuracy: 0.9755 - val_loss: 0.0901
+Epoch 8/50
+1688/1688 - 3s - 2ms/step - accuracy: 0.9863 - loss: 0.0415 - val_accuracy: 0.9788 - val_loss: 0.0933
+Epoch 9/50
+
+Epoch 9: saving model to ./checkpoints/model_epoch_9.keras
+1688/1688 - 3s - 2ms/step - accuracy: 0.9879 - loss: 0.0361 - val_accuracy: 0.9737 - val_loss: 0.0991
+Epoch 10/50
+1688/1688 - 3s - 2ms/step - accuracy: 0.9893 - loss: 0.0319 - val_accuracy: 0.9765 - val_loss: 0.0946
+[1m  1/313[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m6s[0m 21ms/step - accuracy: 0.9688 - loss: 0.0829[1m 59/313[0m [32m━━━[0m[37m━━━━━━━━━━━━━━━━━[0m [1m0s[0m 872us/step - accuracy: 0.9728 - loss: 0.0803[1m113/313[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m0s[0m 899us/step - accuracy: 0.9672 - loss: 0.0980[1m165/313[0m [32m━━━━━━━━━━[0m[37m━━━━━━━━━━[0m [1m0s[0m 921us/step - accuracy: 0.9654 - loss: 0.1037[1m225/313[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m0s[0m 900us/step - accuracy: 0.9655 - loss: 0.1042[1m277/313[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 913us/step - accuracy: 0.9662 - loss: 0.1021[1m313/313[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 918us/step - accuracy: 0.9669 - loss: 0.1002
+Test Accuracy: 0.9718
