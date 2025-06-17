@@ -26,7 +26,7 @@ y = data[:,-1].reshape(-1,1)  # output data shape: (20,1)
 
 # Here we use set validation and test samples:
 val_idx  = 3
-test_idx = 2
+test_idx = 2 # was 10
 
 X_val, y_val   = X[val_idx:val_idx+1],   y[val_idx:val_idx+1]
 X_test, y_test = X[test_idx:test_idx+1], y[test_idx:test_idx+1]
@@ -57,7 +57,7 @@ y_test_01  = (y_test  - y_min) / (y_max - y_min)
 
 #------------
 # 1) Choose a seed
-seed = 69
+seed = 69  #LMAO
 
 # 2) Seed Python, NumPy, and TensorFlow global RNGs
 random.seed(seed)
