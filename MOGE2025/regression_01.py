@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.callbacks import EarlyStopping
+import random
+from tensorflow.keras.initializers import GlorotUniform, Zeros
 
 #--------------
 # fixing commas into dots and data loading
@@ -54,12 +56,20 @@ y_val_01   = (y_val   - y_min) / (y_max - y_min)
 y_test_01  = (y_test  - y_min) / (y_max - y_min)
 
 #------------
+# 1) Choose a seed
+seed = 69
+
+# 2) Seed Python, NumPy, and TensorFlow global RNGs
+random.seed(seed)
+np.random.seed(seed)
+tf.random.set_seed(seed)
+
 # Build the neural network model
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(64, activation='relu', input_shape=(2,)),
-    tf.keras.layers.Dense(32, activation='relu'),
-    tf.keras.layers.Dense(16, activation='relu'),
-    tf.keras.layers.Dense(1, activation='relu')  # was linear (not avail. on GH)
+    tf.keras.layers.Dense(64, activation='relu', input_shape=(2,), kernel_initializer=GlorotUniform(seed=seed), bias_initializer=Zeros()),
+    tf.keras.layers.Dense(32, activation='relu', kernel_initializer=GlorotUniform(seed=seed), bias_initializer=Zeros()),
+    tf.keras.layers.Dense(16, activation='relu', kernel_initializer=GlorotUniform(seed=seed), bias_initializer=Zeros()),
+    tf.keras.layers.Dense(1, activation='relu', kernel_initializer=GlorotUniform(seed=seed), bias_initializer=Zeros())  # was linear (not avail. on GH)
 ])
 
 #------------
