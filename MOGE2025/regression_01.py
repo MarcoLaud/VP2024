@@ -59,7 +59,7 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(2,)),
     tf.keras.layers.Dense(32, activation='relu'),
     tf.keras.layers.Dense(16, activation='relu'),
-    tf.keras.layers.Dense(1, activation='linear')
+    tf.keras.layers.Dense(1, activation='relu')  # was linear (not avail. on GH)
 ])
 
 #------------
