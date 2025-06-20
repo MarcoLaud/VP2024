@@ -42,7 +42,7 @@ def latin_hypercube_sampling(N, L, l, seed=None):
 
 if __name__ == "__main__":
     # --- USER PARAMETERS ---
-    N = 20        # number of panel‐center positions (change as needed)
+    N = 30        # number of panel‐center positions (change as needed)
     L = 23.5      # room length in meters (x ∈ [0, L])
     l = 8.6       # room width in meters  (y ∈ [0, l])
     SEED = 42     # optional: set to None for non‐reproducible randomness
