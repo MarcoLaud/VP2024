@@ -5,3 +5,5 @@
 
 The training dataset is in "data_fixed.csv", and is based on 20 simulations from Pachyderm (Rhino). The positions of the panel are obtained via a Latine Lattice Sampling as defined in "LLH.py".
 
+The files with extension ".gh" and ".3dm" contain the Grasshopper 3D implementation of the neural network (in PUG).
+
