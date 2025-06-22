@@ -39,7 +39,10 @@ y = data[:,-1].reshape(-1,1)  # output data shape: (20,1)
 #-------------
 # Leave-one-case-out study:
 loo = LeaveOneOut()
+
+inouts = np.zeros((30,4))
 errs = np.zeros(30)
+
 jj=0  # loop idx
 for train_idx, test_idx in loo.split(X):
     tf.keras.backend.clear_session()  # clear the session
@@ -97,11 +100,13 @@ for train_idx, test_idx in loo.split(X):
     print("RELATIVE DIFFERENCE: {}%".format(rel_diff))
     print("------------------------------------------------------------")
     errs[jj] = rel_diff[0]
+    inouts[jj] = [X_test[0][0], X_test[0][1], y_test[0][0], y_pred[0][0]]
     jj +=1
 
 print("############################")
 print("MEAN RELATIVE ERROR: {:.4f}".format(np.mean(errs)))
 print("############################")
 
-# Save errors:
+# Save arrays:
 np.save("rel_diffs.npy", errs)
+np.save("outputs.npy", inouts)

@@ -21,7 +21,7 @@ X = data[:,:2]                # input data shape: (20,2)
 y = data[:,-1].reshape(-1,1)  # output data shape: (20,1)
 
 # Here we use set validation and test samples:
-val_idx  = 3
+val_idx  = 0
 test_idx = 25 # was 25 and 2
 
 X_val, y_val   = X[val_idx:val_idx+1],   y[val_idx:val_idx+1]
