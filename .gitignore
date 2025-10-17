@@ -1,2 +1,6 @@
 *.txt
 *.npy
+*.keras
+*.png
+*.json
+*.pkl
