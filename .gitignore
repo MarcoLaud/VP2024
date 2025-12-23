@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.txt
 *.npy
 *.keras
@@ -5,3 +6,13 @@
 *.json
 *.pkl
 *.h5
+=======
+*.csv
+*.npy
+*.png
+*.h5
+*.keras
+*.pkl
+postprocessing_data/
+
+>>>>>>> f70bac3 (Stop tracking files now in .gitignore)
